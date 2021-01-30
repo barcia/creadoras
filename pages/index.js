@@ -5,18 +5,17 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>API de creadoras e creadores de contido en galego</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Creadoras e creadores de contido en galego
+          API de creadoras e creadores de contido en galego
         </h1>
 
         <p className={styles.description}>
-          Podcasts:
-          <code className={styles.code}>pages/index.js</code>
+          Repositorio: <a href="https://github.com/barcia/creadoras">github.com/barcia/creadoras</a>
         </p>
 
         <div className={styles.grid}>
