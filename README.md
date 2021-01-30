@@ -8,6 +8,12 @@ Engadirei mais contido próximamente e novas canles como **YouTube** e **Twitch*
 
 Calquera achega é benvida. Podes engadir contido no directorio `/data`
 
+## Créditos
+De momento, o contido que introducín para comezar as probas saqueino de:
+
+* [vinte.praza.gal](https://vinte.praza.gal/artigo/os-mellores-boletins-dixitais-que-podes-recibir-en-galego)
+* [podgalego.agora.gal/](https://podgalego.agora.gal/)
+
 ## Getting Started
 
 First, run the development server:
