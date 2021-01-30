@@ -11,26 +11,36 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Creadoras e creadores de contido en galego
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Podcasts:
           <code className={styles.code}>pages/index.js</code>
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="/api/podcasts" className={styles.card}>
+            <h3>/api/podcasts</h3>
+            {/* <p>Podcasts e o último episodio do mesmo</p> */}
           </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="/api/boletins" className={styles.card}>
+            <h3>/api/boletins</h3>
+            {/* <p>Boletíns</p> */}
           </a>
 
-          <a
+          <a className={styles.card}>
+            <h3>/api/youtube</h3>
+            <p>Próximamente</p>
+          </a>
+
+          <a className={styles.card}>
+            <h3>/api/twitch</h3>
+            <p>Próximamente</p>
+          </a>
+
+          {/* <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
@@ -46,7 +56,7 @@ export default function Home() {
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
-          </a>
+          </a> */}
         </div>
       </main>
 
