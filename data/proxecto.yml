@@ -8,7 +8,7 @@ topics:
 channels:
   web:
     url: "https://google.es"
-    rss: "https://google.es/feed.xml"
+    feed: "https://google.es/feed.xml"
   youtube: "https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ"
   twitch: "https://www.twitch.tv/ibai"
   facebook: url_facebook_page

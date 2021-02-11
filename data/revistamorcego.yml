@@ -7,6 +7,6 @@ topics:
 channels:
   web:
     url: https://revistamorcego.com/
-    rss: https://revistamorcego.com/feed
+    feed: https://revistamorcego.com/feed
   twitter: MorcegoRevista
   facebook: https://www.facebook.com/RevistaMorcego
