@@ -3,18 +3,20 @@ description: "Lorem ipsum dolor sit amet"
 author: "Nome Apelido"
 contact: "nome@gmail.com"
 topics:
-    - topic-1
-    - topic-2
+  - topic-1
+  - topic-2
 channels:
-    - web:
-        - url: "https://google.es"
-        - rss: "https://google.es/feed.xml"
-    - youtube: "https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ"
-    - twitch: "https://www.twitch.tv/ibai"
-    - instagram: hiclavero
-    - twitter: elonmusk
-    - tiktok: username
-    - podcast: "https://www.ivoox.com/podcast-podcast-despeja-x-by-xataka_fg_f1579492_filtro_1.xml"
-    - newsletter:
-        - url: "url_newsletter"
-        - feed: "url_newsletter_feed"
+  web:
+    url: "https://google.es"
+    rss: "https://google.es/feed.xml"
+  youtube: "https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ"
+  twitch: "https://www.twitch.tv/ibai"
+  facebook: url_facebook_page
+  instagram: hiclavero
+  twitter: elonmusk
+  tiktok: username
+  spotify: url_user_or_playlist
+  podcast: "https://www.ivoox.com/podcast-podcast-despeja-x-by-xataka_fg_f1579492_filtro_1.xml"
+  newsletter:
+    url: "url_newsletter"
+    feed: "url_newsletter_feed"

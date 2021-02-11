@@ -1,0 +1,12 @@
+title: Revista Morcego
+description: Novas, reportaxes, análises e artigos sobre videoxogos en galego
+author: Carlos Pereiro
+contact: info@revistamorcego.com
+topics:
+  - videoxogos
+channels:
+  web:
+    url: https://revistamorcego.com/
+    rss: https://revistamorcego.com/feed
+  twitter: MorcegoRevista
+  facebook: https://www.facebook.com/RevistaMorcego

@@ -1,0 +1,12 @@
+title: conxeito
+description: Boletín sobre deseño dixital
+author: Óscar Otero
+contact: oom@oscarotero.com
+topics:
+  - deseño
+  - ux
+  - ui
+channels:
+  newsletter:
+    url: https://oscarotero.us3.list-manage.com/subscribe?u=b76091042fc4e142a9360ebb0&id=5fe133b73c
+    feed: https://oscarotero.gal/conxeito.xml
