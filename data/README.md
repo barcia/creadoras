@@ -3,24 +3,26 @@ Cada arquivo `.yml` corresponde a un proxecto, podendo ter este varias canles. U
 Plantilla:
 
 ```yml
-title: "Nome do proxecto"
-description: "Descripción do proxecto"
-author: "Autor ou autora"
-contact: "mail"
+title: "Proxecto de exemplo"
+description: "Lorem ipsum dolor sit amet"
+author: "Nome Apelido"
+contact: "nome@gmail.com"
 topics:
-    - topic-1
-    - topic-2
+  - topic-1
+  - topic-2
 channels:
-    - web:
-        - url: url_web
-        - rss: url_rss
-    - youtube: url_channel_youtube
-    - twitch: url_channel_twitch
-    - instagram: username
-    - twitter: username
-    - tiktok: username
-    - podcast: url_feed
-    - newsletter:
-        - url: url_newsletter
-        - feed: url_newsletter_feed
+  web:
+    url: "https://google.es"
+    feed: "https://google.es/feed.xml"
+  youtube: "https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ"
+  twitch: "https://www.twitch.tv/ibai"
+  facebook: url_facebook_page
+  instagram: hiclavero
+  twitter: elonmusk
+  tiktok: username
+  spotify: url_user_or_playlist
+  podcast: "https://www.ivoox.com/podcast-podcast-despeja-x-by-xataka_fg_f1579492_filtro_1.xml"
+  newsletter:
+    url: "url_newsletter"
+    feed: "url_newsletter_feed"
 ```
