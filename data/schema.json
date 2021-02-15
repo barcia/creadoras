@@ -11,9 +11,9 @@
         "type": "string"
       },
       "description": {
-        "description": "Descripción do proxecto. Máximo 140 caracteres.",
+        "description": "Descripción do proxecto. Máximo 255 caracteres.",
         "type": "string",
-        "maxLength": 140
+        "maxLength": 255
       },
       "author": {
         "description": "Autor ou autores do proxecto.",
@@ -109,5 +109,5 @@
         }
       }
     },
-    "required": ["title", "description", "author", "topics"]
+    "required": ["title", "description", "topics"]
 }
