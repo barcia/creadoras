@@ -38,10 +38,14 @@ for await (const entry of Deno.readDir("data")) {
 
 Deno.writeTextFile(
   "dist/api.json",
-  JSON.stringify({
-    lastUpdated: new Date(),
-    data: all
-  }, null, 2)
+  JSON.stringify(
+    {
+      lastUpdated: new Date(),
+      data: all,
+    },
+    null,
+    2,
+  ),
 );
 
 async function loadFeed(url) {
@@ -79,7 +83,7 @@ async function loadYoutubeFeed(url) {
   // but we can get it from the id value yt:video:[id]
   if (data.lastEntry) {
     const videoId = data.lastEntry.id.replace("yt:video:", "");
-    data.lastEntry.url = `https://www.youtube.com/watch?v=${videoId}`
+    data.lastEntry.url = `https://www.youtube.com/watch?v=${videoId}`;
   }
 
   return data;
