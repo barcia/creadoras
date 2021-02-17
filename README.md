@@ -1,18 +1,34 @@
 # NGAL
+
 API con creadoras e creadores de contido en galego en distintas plataformas
 
+## Funcionamento
 
-### Tasks:
-* `npm run build`: Crea o JSON que funcionará como API
-* `npm start`: Executa un *build* e despois levanta un servidor coa API.
+Os scripts funcionan con [Deno](https://deno.land/). Se non o tes instalado,
+[aquí estan as instruccións](https://deno.land/manual@v1.7.4/getting_started/installation).
 
-### Validar os YAML en VSCode
-1. Instala a extensión [yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
-2. Activa nos axustes de *vscode* do propio proxecto a validación:
-    ```json
-    {
-        "yaml.schemas": {
-            "./data/schema.json": ["/data/*"]
-        }
-    }
-    ```
+Para crear o arquivo `dist/api.json` co que funcionará a API:
+
+```
+deno run --allow-read --allow-write --allow-net scripts/build.js
+```
+
+Para levantar un servidor local en http://localhost:3000
+
+```
+deno run --allow-read --allow-net scripts/server.js
+```
+
+## Validar os YAML en VSCode
+
+1. Instala a extensión
+   [yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
+2. Activa nos axustes de _vscode_ do propio proxecto a validación:
+
+   ```json
+   {
+       "yaml.schemas": {
+           "./scripts/schema.json": ["/data/*"]
+       }
+   }
+   ```

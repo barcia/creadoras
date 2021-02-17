@@ -5,8 +5,12 @@ import {
 } from "https://deno.land/std@0.87.0/path/mod.ts";
 import { parse } from "https://deno.land/std@0.87.0/encoding/yaml.ts";
 import { deserializeFeed } from "https://deno.land/x/rss@0.3.1/mod.ts";
+import Ajv from "https://jspm.dev/ajv@7.1.1";
 
 const all = [];
+const ajv = new Ajv.default({ allErrors: true, allowUnionTypes: true });
+const schema = JSON.parse(await Deno.readTextFile("scripts/schema.json"));
+const validator = ajv.compile(schema);
 
 for await (const entry of Deno.readDir("data")) {
   if (extname(entry.name) !== ".yml") {
@@ -15,6 +19,15 @@ for await (const entry of Deno.readDir("data")) {
 
   const id = basename(entry.name, ".yml");
   const data = parse(await Deno.readTextFile(join("data", entry.name)));
+  const valid = validator(data);
+
+  if (!valid) {
+    console.log("");
+    console.log(`Error in "${entry.name}"`);
+    console.log("");
+    console.log(validator.errors);
+    Deno.exit(1);
+  }
 
   //Expand data using feed and other APIs
   if (data.channels.podcast) {

@@ -1,4 +1,5 @@
-Cada arquivo `.yml` corresponde a un proxecto, podendo ter este varias canles. Unha mesma autora ou autor pode ter varios proxectos distintos.
+Cada arquivo `.yml` corresponde a un proxecto, podendo ter este varias canles.
+Unha mesma autora ou autor pode ter varios proxectos distintos.
 
 Plantilla:
 
