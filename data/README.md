@@ -15,8 +15,8 @@ channels:
   web:
     url: "https://google.es"
     feed: "https://google.es/feed.xml"
-  youtube: "https://www.youtube.com/channel/UCBJycsmduvYEL83R_U4JriQ"
-  twitch: "https://www.twitch.tv/ibai"
+  youtube: "UCBJycsmduvYEL83R_U4JriQ"
+  twitch: "ibai"
   facebook: url_facebook_page
   instagram: hiclavero
   twitter: elonmusk
