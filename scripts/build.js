@@ -80,15 +80,8 @@ async function loadFeed(url) {
   };
 }
 
-async function loadYoutubeFeed(url) {
-  const pathname = new URL(url).pathname;
+async function loadYoutubeFeed(id) {
 
-  //We need that the channel url includes the id (https://www.youtube.com/channel/{id})
-  if (!pathname.startsWith("/channel/")) {
-    return url;
-  }
-
-  const id = basename(pathname);
   const feed = `https://www.youtube.com/feeds/videos.xml?channel_id=${id}`;
   const data = await loadFeed(feed);
 
