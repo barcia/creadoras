@@ -13,10 +13,17 @@ Para crear o arquivo `dist/api.json` co que funcionará a API:
 deno run --allow-read --allow-write --allow-net scripts/build.js
 ```
 
-Para levantar un servidor local en http://localhost:3000
+Para levantar un servidor local para a API http://localhost:3000
 
 ```
 deno run --allow-read --allow-net scripts/server.js
+```
+
+Para levantar un servidor local cunha web en html http://localhost:3000
+
+```
+cd web
+deno run --unstable -A https://deno.land/x/lume/cli.js --serve
 ```
 
 ## Validar os YAML en VSCode
