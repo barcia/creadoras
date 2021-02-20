@@ -92,6 +92,9 @@ async function loadYoutubeFeed(id) {
     data.lastEntry.url = `https://www.youtube.com/watch?v=${videoId}`;
   }
 
+  // Set the youtube channel url
+  data.url = `https://www.youtube.com/channel/${id}/`;
+
   return data;
 }
 
