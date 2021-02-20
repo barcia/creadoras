@@ -6,6 +6,7 @@ import {
 import { parse } from "https://deno.land/std@0.87.0/encoding/yaml.ts";
 import { deserializeFeed } from "https://deno.land/x/rss@0.3.1/mod.ts";
 import Ajv from "https://jspm.dev/ajv@7.1.1";
+import { ensureDir } from "https://deno.land/std@0.88.0/fs/ensure_dir.ts";
 
 const all = [];
 const ajv = new Ajv.default({ allErrors: true, allowUnionTypes: true });
@@ -48,6 +49,8 @@ for await (const entry of Deno.readDir("data")) {
 
   all.push({ id, ...data });
 }
+
+await ensureDir("dist");
 
 Deno.writeTextFile(
   "dist/api.json",
