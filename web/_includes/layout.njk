@@ -31,8 +31,10 @@
       gap: 1em;
       flex-wrap: wrap;
     }
-    .project-entry::before {
-      content: "👉";
+    .project-entry::marker {
+      content: "👉\00A0";
+      white-space: nowrap;
+      margin-right: 1em;
     }
   </style>
 </head>

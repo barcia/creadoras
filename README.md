@@ -22,8 +22,7 @@ deno run --allow-read --allow-net scripts/server.js
 Para levantar un servidor local cunha web en html http://localhost:3000
 
 ```
-cd web
-deno run --unstable -A https://deno.land/x/lume/cli.js --serve
+deno run --unstable -A https://deno.land/x/lume/cli.js --serve --root=web
 ```
 
 ## Validar os YAML en VSCode

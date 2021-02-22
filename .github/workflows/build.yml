@@ -19,3 +19,14 @@ jobs:
       - name: Run build
         run: |
           deno run --allow-read --allow-write --allow-net scripts/build.js
+      
+      - name: Generate the static site
+        run: |
+          deno run --unstable -A https://deno.land/x/lume/cli.js --root=web
+
+      - name: Deploy site
+        uses: crazy-max/ghaction-github-pages@v2.0.1
+        with:
+          build_dir: web/_site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -2,6 +2,7 @@
 title: ngal
 layout: layout.njk
 ---
+<p>Última actualización: {{ api.lastUpdated }}</p>
 
 <main class="projects">
   {% for item in api.data %}
@@ -21,17 +22,19 @@ layout: layout.njk
       {% endfor %}
     </ul>
 
+    <ul class="project-updates">
     {% for type, channel in item.channels %}
       {% if channel.lastEntry %}
       {% set entry = channel.lastEntry %}
-        <p class="project-entry">
+        <li class="project-entry">
           <a href="{{ entry.url }}">
             <strong>{{ type }}:</strong>
             {{ entry.title }}
           </a>
-        </p>
+        </li>
       {% endif %}
-      {% endfor %}
+    {% endfor %}
+    </ul>
   </article>
   {% endfor %}
 </main>
