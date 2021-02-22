@@ -5,3 +5,5 @@ dist/
 # misc
 .DS_Store
 *.pem
+
+web/_site

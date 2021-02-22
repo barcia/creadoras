@@ -1,0 +1,40 @@
+---
+title: ngal
+layout: layout.njk
+---
+<p>Última actualización: {{ api.lastUpdated }}</p>
+
+<main class="projects">
+  {% for item in api.data %}
+  <article class="project">
+    <header>
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+    </header>
+
+    <ul class="project-channels">
+      {% for type, channel in item.channels %}
+      <li>
+        <a href="{{ channel.url }}">
+          {{ type }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <ul class="project-updates">
+    {% for type, channel in item.channels %}
+      {% if channel.lastEntry %}
+      {% set entry = channel.lastEntry %}
+        <li class="project-entry">
+          <a href="{{ entry.url }}">
+            <strong>{{ type }}:</strong>
+            {{ entry.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </article>
+  {% endfor %}
+</main>

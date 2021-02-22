@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="gl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ngal</title>
+  <style>
+    body {
+      font-family: -apple-system, system-ui, sans-serif;
+      font-size: 0.9em;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+      padding: 5vw;
+      gap: 1em;
+    }
+    .project {
+      background: #efefef;
+      padding: 1em;
+      border-radius: 1em;
+    }
+    .project h2 {
+      margin: 0;
+    }
+    .project-channels {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .project-entry::marker {
+      content: "👉\00A0";
+      white-space: nowrap;
+      margin-right: 1em;
+    }
+  </style>
+</head>
+<body>
+  {{ content | safe }}
+</body>
+</html>
