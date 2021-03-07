@@ -1,113 +1,113 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://github.com/barcia/ngal/",
-    "title": "Proxectos",
-    "description": "Proxectos de creadoras e creadores de contido en galego",
-    "type": "object",
-    "additionalProperties": false,
-    "properties": {
-      "title": {
-        "description": "Título do proxecto.",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/barcia/ngal/",
+  "title": "Proxectos",
+  "description": "Proxectos de creadoras e creadores de contido en galego",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "description": "Título do proxecto.",
+      "type": "string"
+    },
+    "description": {
+      "description": "Descripción do proxecto. Máximo 255 caracteres.",
+      "type": "string",
+      "maxLength": 255
+    },
+    "author": {
+      "description": "Autor ou autores do proxecto.",
+      "type": ["string", "array"],
+      "uniqueItems": true,
+      "items": {
         "type": "string"
-      },
-      "description": {
-        "description": "Descripción do proxecto. Máximo 255 caracteres.",
-        "type": "string",
-        "maxLength": 255
-      },
-      "author": {
-        "description": "Autor ou autores do proxecto.",
-        "type": ["string", "array"],
-        "uniqueItems": true,
-        "items": {
-          "type": "string"
-        }
-      },
-      "contact": {
-        "description": "Método ou dirección de contacto.",
-        "type": "string"
-      },
-      "topics": {
-        "description": "Temas ou palabras claves sobre as que trata o proxecto",
-        "type": "array",
-        "minItems": 1,
-        "maxItems": 5,
-        "uniqueItems": true,
-        "items": {
-            "type": "string"
-        }
-      },
-      "channels": {
-        "description": "Canles mediante as que se publica contido",
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "web": {
-            "description": "Boletín de correo electrónico",
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "url": {
-                "description": "URL da web",
-                "type": "string"
-              },
-              "feed": {
-                "description": "URL do feed RSS da web se existe",
-                "type": "string"
-              }
-            },
-            "required": ["url"]
-          },
-          "youtube": {
-            "description": "Canle de YouTube",
-            "type": "string"
-          },
-          "twitch": {
-            "description": "Canle de Twitch",
-            "type": "string"
-          },
-          "facebook": {
-            "description": "Páxina de Facebook",
-            "type": "string"
-          },
-          "instagram": {
-            "description": "nome de usuario de Instagram",
-            "type": "string"
-          },
-          "twitter": {
-            "description": "Nome de usuario de Twitter",
-            "type": "string"
-          },
-          "tiktok": {
-            "description": "Nome de usuario de TikTok",
-            "type": "string"
-          },
-          "spotify": {
-            "description": "URL da lista de Spotify",
-            "type": "string"
-          },
-          "podcast": {
-            "description": "URL do feed do podcast",
-            "type": "string"
-          },
-          "newsletter": {
-            "description": "Boletín de correo electrónico",
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "url": {
-                "description": "URL do boletín",
-                "type": "string"
-              },
-              "feed": {
-                "description": "URL do feed RSS do boletín",
-                "type": "string"
-              }
-            },
-            "required": ["url"]
-          }
-        }
       }
     },
-    "required": ["title", "description", "topics"]
+    "contact": {
+      "description": "Método ou dirección de contacto.",
+      "type": "string"
+    },
+    "topics": {
+      "description": "Temas ou palabras claves sobre as que trata o proxecto",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "channels": {
+      "description": "Canles mediante as que se publica contido",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "web": {
+          "description": "Boletín de correo electrónico",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "url": {
+              "description": "URL da web",
+              "type": "string"
+            },
+            "feed": {
+              "description": "URL do feed RSS da web se existe",
+              "type": "string"
+            }
+          },
+          "required": ["url"]
+        },
+        "youtube": {
+          "description": "Canle de YouTube",
+          "type": "string"
+        },
+        "twitch": {
+          "description": "Canle de Twitch",
+          "type": "string"
+        },
+        "facebook": {
+          "description": "Páxina de Facebook",
+          "type": "string"
+        },
+        "instagram": {
+          "description": "nome de usuario de Instagram",
+          "type": "string"
+        },
+        "twitter": {
+          "description": "Nome de usuario de Twitter",
+          "type": "string"
+        },
+        "tiktok": {
+          "description": "Nome de usuario de TikTok",
+          "type": "string"
+        },
+        "spotify": {
+          "description": "URL da lista de Spotify",
+          "type": "string"
+        },
+        "podcast": {
+          "description": "URL do feed do podcast",
+          "type": "string"
+        },
+        "newsletter": {
+          "description": "Boletín de correo electrónico",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "url": {
+              "description": "URL do boletín",
+              "type": "string"
+            },
+            "feed": {
+              "description": "URL do feed RSS do boletín",
+              "type": "string"
+            }
+          },
+          "required": ["url"]
+        }
+      }
+    }
+  },
+  "required": ["title", "description", "topics"]
 }

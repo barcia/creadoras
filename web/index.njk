@@ -2,14 +2,18 @@
 title: ngal
 layout: layout.njk
 ---
-<p>Última actualización: {{ api.lastUpdated }}</p>
+<p>Última actualización: {{ api.lastUpdated | date("DATETIME") }}</p>
 
 <main class="projects">
   {% for item in api.data %}
   <article class="project">
     <header>
       <h2>{{ item.title }}</h2>
-      <p>{{ item.description }}</p>
+      <p>
+        {{ item.description }}
+        <br><time>{{ item.lastUpdated | date("HUMAN_DATE") }}</time>
+      </p>
+      
     </header>
 
     <ul class="project-channels">

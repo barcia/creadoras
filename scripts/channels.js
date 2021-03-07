@@ -66,15 +66,15 @@ async function loadFeed(url) {
   const last = feed.items.shift();
 
   return {
-    title: feed.title,
-    description: feed.description,
+    title: get(feed.title),
+    description: get(feed.description),
     url: feed.home_page_url,
     feed: url,
     lastEntry: {
       id: last.id,
-      title: last.title,
-      summary: last.summary,
-      url: last.external_url,
+      title: get(last.title),
+      summary: get(last.summary),
+      url: last.external_url || last.id,
       date: last.date_published,
     },
   };
@@ -85,4 +85,14 @@ async function getFeedData(url) {
   const xml = await response.text();
   const { feed } = await deserializeFeed(xml, { outputJsonFeed: true });
   return feed;
+}
+
+function get(text) {
+  if (typeof text !== "string") {
+    return;
+  }
+
+  return text
+    .replaceAll(/&#(\d+);/g, (all, number) => String.fromCodePoint(number))
+    .trim();
 }
